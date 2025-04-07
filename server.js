@@ -4,13 +4,12 @@ const mongoose = require("mongoose");
 
 dotenv.config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
-  mongoose.connect(process.env.DATABASE_URL).then(() => {
-    console.log("Connected to Database");
-  });
+mongoose.connect(process.env.DATABASE_URL).then(() => {
+  console.log("Connected to Database");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
