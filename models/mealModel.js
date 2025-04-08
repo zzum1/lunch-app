@@ -4,6 +4,7 @@ const mealSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
+        unique: [true, 'Meal title must be unique'],
     },
     description: {
         type: String,
