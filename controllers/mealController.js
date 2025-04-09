@@ -53,7 +53,6 @@ exports.deleteMealById = async (req, res) => {
         res.status(204).json({
             status: 'success',
             message: 'Meal deleted successfully',
-            data: null,
         });
     } catch (error) {
         res.status(400).json({
